@@ -2,7 +2,6 @@
 layout: about
 title: about
 permalink: /
-subtitle: Department of Mechanical Engineering, <a href='https://www.colostate.edu/'>Colorado State University</a>. Fort Collins, Colorado.
 
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
@@ -10,20 +9,41 @@ social: true # includes social icons at the bottom of the page
 announcements:
   enabled: true # includes a list of news items
   scrollable: true # adds a vertical scroll bar if there are more than 3 news items
-  limit: 8 # leave blank to include all the news in the `_news` folder
+  limit: 6 # leave blank to include all the news in the `_news` folder
 
 latest_posts:
   enabled: false
 ---
 
-**We design and build novel, small, and adaptive robots that can reconfigure their shapes, structures, or functionalities to fulfill tasks in diverse environments.**
+<div class="lab-hero">
+  <h1 class="lab-hero-title">Adaptive Robotics Lab</h1>
+  <div class="lab-hero-sub">Department of Mechanical Engineering · Colorado State University</div>
+  <p class="lab-hero-tagline">We design and build novel, small, and adaptive robots that can reconfigure their shapes, structures, or functionalities to fulfill tasks in diverse environments.</p>
+  <a class="lab-btn lab-btn-gold" href="/research/">Our research</a>
+  <a class="lab-btn lab-btn-outline" href="/publications/">Publications</a>
+</div>
 
-Welcome to the Adaptive Robotics Laboratory at Colorado State University. The lab is founded and directed by Professor [Jianguo Zhao](/people/) in the Department of Mechanical Engineering. It is located at the Powerhouse Energy Campus in Fort Collins, Colorado.
+The Adaptive Robotics Laboratory is founded and directed by Professor [Jianguo Zhao](/people/) and is located at the Powerhouse Energy Campus in Fort Collins, Colorado. We explore the fundamental science and applications of adaptive robots: robots that actively adapt to different environments and tasks by changing their shapes, sizes, motions, and functions. Our approach integrates reconfigurable mechanisms, variable-stiffness materials, biologically inspired principles, and advanced control.
 
-The lab explores the fundamental science and applications of adaptive robots: robots that can actively adapt to different environments and tasks by changing their shapes, sizes, motions, and functions. For fundamental science, we study how to create adaptive robots with physical intelligence by integrating reconfigurable mechanisms, variable-stiffness materials, biologically inspired principles, and advanced control algorithms.
+Applications span robotics-inspired biology (how robots can help unravel principles of animal locomotion), biomedical devices (e.g., devices that assist the human heart), and environmental monitoring and inspection.
 
-Building on this foundation, we explore applications in robotics-inspired biology (how robots can help unravel biological principles of locomotion), biomedical devices (e.g., medical devices that assist the human heart), and environmental monitoring (e.g., reconfigurable robots for pipeline and infrastructure inspection).
+## Research areas
 
-- **Students:** we are always looking for motivated graduate and undergraduate students. See [join us](/join/).
-- **Industry:** we welcome collaborations on advanced robotic system design and integration. Please [contact us](mailto:zhao@engr.colostate.edu).
-- **Code:** open-source code from the lab is on [GitHub](https://github.com/AdaptiveRoboticsLab).
+<div class="lab-cards">
+  <a class="lab-card" href="/research/#soft-robots">
+    <h3>Soft Robots</h3>
+    <p>Artificial muscles, bistable mechanisms for fast and strong motion, and shape morphing.</p>
+  </a>
+  <a class="lab-card" href="/research/#flying-robots">
+    <h3>Flying Robots</h3>
+    <p>Perching for palm-size aerial robots using onboard vision and compliant bistable grippers.</p>
+  </a>
+  <a class="lab-card" href="/research/#reconfigurable-robots">
+    <h3>Reconfigurable Robots</h3>
+    <p>Variable-stiffness joints, origami and tensegrity modules that let one body serve many functions.</p>
+  </a>
+</div>
+
+## Join us
+
+We are always looking for motivated graduate and undergraduate students interested in robotics, controls, mechanical design, mechatronics, and embedded systems. Please email [Prof. Zhao](mailto:zhao@engr.colostate.edu) with your CV, or search "Adaptive Robotics Laboratory" at [jobs.colostate.edu](https://jobs.colostate.edu). We also welcome collaborations with industry partners on robotic system design and integration.

@@ -8,14 +8,13 @@ Edit files on the `main` branch; GitHub Actions rebuilds and deploys the site to
 
 | What | Where |
 | --- | --- |
-| Home page text | `_pages/about.md` |
+| Home page (hero, research cards, join us) | `_pages/about.md` |
 | Research areas | `_pages/research.md` |
 | People | `_pages/people.md` |
 | Publications | `_bibliography/papers.bib` (add `selected = {true}` to show on the home page) |
 | News | one file per item in `_news/` (copy an existing one) |
-| Teaching, Join us | `_pages/teaching.md`, `_pages/join.md` |
-| Code page | `_data/repositories.yml` |
 | Site title, URL, settings | `_config.yml` |
 | Images | `assets/img/` |
+| Colors and styling (CSU branding) | bottom of `assets/css/main.scss` |
 
 Template documentation: `docs/` and `docs/AL_FOLIO_README.md`.
