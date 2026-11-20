@@ -1,6 +1,6 @@
 ---
 layout: page
-permalink: /repositories/
+permalink: /code/
 title: code
 description: open-source code from the Adaptive Robotics Lab
 nav: true
