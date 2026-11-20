@@ -7,6 +7,8 @@ nav: true
 nav_order: 7
 ---
 
+All of the lab's open-source code is on GitHub at [github.com/AdaptiveRoboticsLab](https://github.com/AdaptiveRoboticsLab).
+
 {% if site.data.repositories.github_users %}
 
 ## GitHub users

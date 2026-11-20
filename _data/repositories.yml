@@ -1,8 +1,6 @@
-github_users:
-  - AdaptiveRoboticsLab
-
-repo_description_lines_max: 2
-
-# Add lab code repositories here as they are published, e.g.:
+# Repositories listed on the /code/ page.
+# Add lab repos as they are published, e.g.:
 # github_repos:
 #   - AdaptiveRoboticsLab/some-repo
+
+repo_description_lines_max: 2
