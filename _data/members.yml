@@ -3,7 +3,18 @@
 # To add a photo: put a square-ish JPG in assets/img/people/ (about 600x600 px is plenty)
 # and set `photo: assets/img/people/<file>.jpg`. Without a photo, the card shows the CSU ram symbol.
 # Links are optional; leave any of website / scholar / linkedin / github empty or remove the line.
-# `group` must be one of: graduate, undergraduate.
+# `group` must be one of: postdoc, graduate, undergraduate (cards are shown in that order).
+
+
+- name: Amir Nazerian
+  group: postdoc
+  degree: Postdoctoral Fellow
+  since:
+  text: Ph.D., University of New Mexico. Co-advised with Prof. Ali Pezeshki
+  photo:
+  website:
+  scholar: https://scholar.google.com/citations?user=_oO6FPUAAAAJ
+  linkedin:
 
 - name: Mahmud Hasan Saikot
   group: graduate
@@ -12,7 +23,7 @@
   text: B.S., Bangladesh University of Engineering and Technology (BUET)
   photo: assets/img/people/mahmud-saikot.jpg
   website: https://mahmud-hasans.github.io
-  scholar:
+  scholar: https://scholar.google.com/citations?user=Pryff28AAAAJ
   linkedin:
   github: https://github.com/mahmud-hasans
 
@@ -23,7 +34,7 @@
   text: B.S., University of Moratuwa, Sri Lanka
   photo: assets/img/people/sudheera-kariyawasam.jpg
   website:
-  scholar:
+  scholar: https://scholar.google.com/citations?user=z-Oq5boAAAAJ
   linkedin:
 
 - name: Yubhin Cho
@@ -55,3 +66,15 @@
   website:
   scholar:
   linkedin:
+
+- name: Erica Lambrecht
+  group: undergraduate
+  degree: Undergraduate researcher
+  text: Senior, Colorado State University
+  photo:
+
+- name: Gibson Roberts-Brysh
+  group: undergraduate
+  degree: Undergraduate researcher
+  text: Senior, Colorado State University
+  photo:

@@ -61,63 +61,37 @@ Email: [Jianguo.Zhao@colostate.edu](mailto:Jianguo.Zhao@colostate.edu) · Phone:
   </div>
 </div>
 
-<!-- Current students come from _data/members.yml (photo, short text, and links for each person). -->
+<!-- Current members come from _data/members.yml (photo, short text, and links for each person).
+     Cards are shown postdocs first, then graduate students, then undergraduates. -->
 
-## Graduate Students
-
-{% assign members = site.data.members | where: "group", "graduate" %}
-<div class="row member-grid">
-  {% for m in members %}
-    <div class="col-6 col-md-4 col-lg-3 mb-4">
-      <div class="member-card">
-        {% if m.photo %}
-          <img class="member-photo" src="{{ m.photo | relative_url }}" alt="{{ m.name }}" loading="lazy">
-        {% else %}
-          <img class="member-photo member-photo-logo" src="{{ '/assets/img/people/csu-ram-symbol.png' | relative_url }}" alt="Colorado State University ram symbol" loading="lazy">
-        {% endif %}
-        <div class="member-name">{{ m.name }}</div>
-        <div class="member-meta">{{ m.degree }}{% if m.since %}, since {{ m.since }}{% endif %}</div>
-        {% if m.text %}<p class="member-text">{{ m.text }}</p>{% endif %}
-        <div class="member-links">
-          {% if m.website %}<a href="{{ m.website }}" title="Website"><i class="fa-solid fa-globe"></i></a>{% endif %}
-          {% if m.scholar %}<a href="{{ m.scholar }}" title="Google Scholar"><i class="ai ai-google-scholar"></i></a>{% endif %}
-          {% if m.linkedin %}<a href="{{ m.linkedin }}" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>{% endif %}
-          {% if m.github %}<a href="{{ m.github }}" title="GitHub"><i class="fa-brands fa-github"></i></a>{% endif %}
-        </div>
-      </div>
-    </div>
-  {% endfor %}
-</div>
-
-{% assign members = site.data.members | where: "group", "undergraduate" %}
-{% if members.size > 0 %}
-
-## Undergraduate Students
+## Current Members
 
 <div class="row member-grid">
-  {% for m in members %}
-    <div class="col-6 col-md-4 col-lg-3 mb-4">
-      <div class="member-card">
-        {% if m.photo %}
-          <img class="member-photo" src="{{ m.photo | relative_url }}" alt="{{ m.name }}" loading="lazy">
-        {% else %}
-          <img class="member-photo member-photo-logo" src="{{ '/assets/img/people/csu-ram-symbol.png' | relative_url }}" alt="Colorado State University ram symbol" loading="lazy">
-        {% endif %}
-        <div class="member-name">{{ m.name }}</div>
-        <div class="member-meta">{{ m.degree }}{% if m.since %}, since {{ m.since }}{% endif %}</div>
-        {% if m.text %}<p class="member-text">{{ m.text }}</p>{% endif %}
-        <div class="member-links">
-          {% if m.website %}<a href="{{ m.website }}" title="Website"><i class="fa-solid fa-globe"></i></a>{% endif %}
-          {% if m.scholar %}<a href="{{ m.scholar }}" title="Google Scholar"><i class="ai ai-google-scholar"></i></a>{% endif %}
-          {% if m.linkedin %}<a href="{{ m.linkedin }}" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>{% endif %}
-          {% if m.github %}<a href="{{ m.github }}" title="GitHub"><i class="fa-brands fa-github"></i></a>{% endif %}
+  {% assign groups = "postdoc,graduate,undergraduate" | split: "," %}
+  {% for g in groups %}
+    {% assign members = site.data.members | where: "group", g %}
+    {% for m in members %}
+      <div class="col-6 col-md-4 col-lg-3 mb-4">
+        <div class="member-card">
+          {% if m.photo %}
+            <img class="member-photo" src="{{ m.photo | relative_url }}" alt="{{ m.name }}" loading="lazy">
+          {% else %}
+            <img class="member-photo member-photo-logo" src="{{ '/assets/img/people/csu-ram-symbol.png' | relative_url }}" alt="Colorado State University ram symbol" loading="lazy">
+          {% endif %}
+          <div class="member-name">{{ m.name }}</div>
+          <div class="member-meta">{{ m.degree }}{% if m.since %}, since {{ m.since }}{% endif %}</div>
+          {% if m.text %}<p class="member-text">{{ m.text }}</p>{% endif %}
+          <div class="member-links">
+            {% if m.website %}<a href="{{ m.website }}" title="Website"><i class="fa-solid fa-globe"></i></a>{% endif %}
+            {% if m.scholar %}<a href="{{ m.scholar }}" title="Google Scholar"><i class="ai ai-google-scholar"></i></a>{% endif %}
+            {% if m.linkedin %}<a href="{{ m.linkedin }}" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>{% endif %}
+            {% if m.github %}<a href="{{ m.github }}" title="GitHub"><i class="fa-brands fa-github"></i></a>{% endif %}
+          </div>
         </div>
       </div>
-    </div>
+    {% endfor %}
   {% endfor %}
 </div>
-
-{% endif %}
 
 ## Alumni
 
