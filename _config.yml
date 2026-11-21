@@ -10,9 +10,7 @@ contact_note: >
   The best way to reach us is by email to Prof. Jianguo Zhao.
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
   Adaptive Robotics Lab at Colorado State University. We design and build adaptive robots that can reconfigure their shapes, structures, or functionalities to perform tasks in diverse environments.
-footer_text: >
-  Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
-  Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
+footer_text: "" # extra text in the footer after the copyright line
 keywords: robotics, adaptive robots, soft robots, aerial robots, reconfigurable robots, tensegrity, Colorado State University
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
 icon: favicon.png # browser-tab icon (file in assets/img/)
