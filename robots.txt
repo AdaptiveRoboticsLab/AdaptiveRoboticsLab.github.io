@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://adaptiveroboticslab.github.io/sitemap.xml
+Sitemap: https://adaptiverobotics.org/sitemap.xml
