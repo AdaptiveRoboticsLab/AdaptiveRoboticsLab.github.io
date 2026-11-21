@@ -1,0 +1,57 @@
+# Current lab members shown as cards on the People page (_pages/people.md).
+#
+# To add a photo: put a square-ish JPG in assets/img/people/ (about 600x600 px is plenty)
+# and set `photo: assets/img/people/<file>.jpg`. Without a photo, the card shows the CSU ram symbol.
+# Links are optional; leave any of website / scholar / linkedin / github empty or remove the line.
+# `group` must be one of: graduate, undergraduate.
+
+- name: Mahmud Hasan Saikot
+  group: graduate
+  degree: Ph.D. student
+  since: 2023
+  text: B.S., Bangladesh University of Engineering and Technology (BUET)
+  photo: assets/img/people/mahmud-saikot.jpg
+  website: https://mahmud-hasans.github.io
+  scholar:
+  linkedin:
+  github: https://github.com/mahmud-hasans
+
+- name: Sudheera Kariyawasam
+  group: graduate
+  degree: Ph.D. student
+  since: 2024
+  text: B.S., University of Moratuwa, Sri Lanka
+  photo: assets/img/people/sudheera-kariyawasam.jpg
+  website:
+  scholar:
+  linkedin:
+
+- name: Yubhin Cho
+  group: graduate
+  degree: Ph.D. student
+  since: 2026
+  text: B.S., Seoul National University of Science and Technology (SeoulTech), South Korea
+  photo:
+  website:
+  scholar:
+  linkedin:
+
+- name: Rory Stone
+  group: graduate
+  degree: M.S. student
+  since: 2026
+  text: B.S., Colorado State University
+  photo: assets/img/people/rory-stone.jpg
+  website:
+  scholar:
+  linkedin:
+
+- name: Dylan Stieglitz
+  group: graduate
+  degree: M.S. student
+  since: 2026
+  text: B.S., Colorado State University
+  photo:
+  website:
+  scholar:
+  linkedin:

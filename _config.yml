@@ -15,8 +15,8 @@ footer_text: >
   Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
 keywords: robotics, adaptive robots, soft robots, aerial robots, reconfigurable robots, tensegrity, Colorado State University
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
-icon: 🤖
-apple_touch_icon: # image name in /assets/img/ (or a rooted path / absolute URL) used for iOS home-screen bookmarks; needs a real 180x180 PNG, since Safari ignores the emoji favicon above. Left empty, iOS falls back to a screenshot of the page.
+icon: favicon.png # browser-tab icon (file in assets/img/)
+apple_touch_icon: /assets/img/logo/apple-touch-icon.png # 180x180 PNG for iOS home-screen bookmarks (rooted path)
 
 url: https://adaptiveroboticslab.github.io # the base hostname & protocol for your site
 baseurl: # the subpath of your site, e.g. /blog/. Leave blank for root
@@ -109,9 +109,9 @@ max_width: 930px
 # -----------------------------------------------------------------------------
 # Display links to the page with a preview object on social media.
 # see https://schema.org/docs/faq.html for more information
-serve_og_meta: false # Include Open Graph meta tags in the HTML head
+serve_og_meta: true # Include Open Graph meta tags in the HTML head
 serve_schema_org: false # Include Schema.org in the HTML head
-og_image: # The site-wide (default for all links) Open Graph preview image
+og_image: /assets/img/logo/og-image.png # link-preview image for shared links
 
 # -----------------------------------------------------------------------------
 # Analytics and search engine verification
@@ -135,7 +135,7 @@ bing_site_verification: # out your bing-site-verification ID (Bing Webmaster)
 # Blog
 # -----------------------------------------------------------------------------
 
-blog_name: al-folio # blog_name will be displayed in your blog page
+blog_name: Adaptive Robotics Lab # blog_name will be displayed in your blog page
 blog_description: a simple whitespace theme for academics
 permalink: /blog/:year/:title/
 lsi: false # produce an index for related posts
@@ -172,17 +172,7 @@ disqus_shortname: al-folio # put your disqus shortname
 # If you have blog posts published on medium.com or other external sources,
 # you can display them in your blog by adding a link to the RSS feed.
 # Optional: Set default categories and tags for posts from each source.
-external_sources:
-  - name: medium.com
-    rss_url: https://medium.com/@al-folio/feed
-    categories: [external-posts]
-    tags: [medium]
-  - name: Google Blog
-    posts:
-      - url: https://blog.google/technology/ai/google-gemini-update-flash-ai-assistant-io-2024/
-        published_date: 2024-05-14
-    categories: [external-posts]
-    tags: [google]
+external_sources: [] # template demo feeds removed
 
 # -----------------------------------------------------------------------------
 # Newsletter
@@ -206,6 +196,12 @@ collections:
     output: true
   projects:
     output: true
+  robots:
+    output: true
+    permalink: /robots/:name/
+  areas:
+    output: true
+    permalink: /research/:name/
   teachings:
     output: true
 
@@ -230,6 +226,9 @@ kramdown:
 include: ["_pages"]
 exclude:
   - AGENTS.md
+  - "Jianguo_CV*.pdf" # CV dropped in the repo root for reference; do not publish
+  - test/ # template test scripts, not part of the site
+  - requirements.txt
   - al-folio-upgrade-report.md
   - bin/
   - CLAUDE.md
@@ -693,9 +692,7 @@ third_party_libraries:
 # Get external JSON data
 # -----------------------------------------------------------------------------
 
-jekyll_get_json:
-  - data: resume
-    json: assets/json/resume.json # it can also be an url
+jekyll_get_json: [] # template demo CV data removed
 
 jsonresume:
   - basics

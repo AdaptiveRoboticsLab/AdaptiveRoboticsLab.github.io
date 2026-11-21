@@ -89,7 +89,8 @@ article h2 {
 }
 
 /* Home page hero (hide the default title block when a hero is present) */
-.post:has(.lab-hero) > .post-header {
+.post:has(.lab-hero) > .post-header,
+.post:has(.lab-hero-video) > .post-header {
   display: none;
 }
 .lab-hero {
@@ -191,4 +192,461 @@ footer a {
   .lab-hero .lab-hero-title {
     font-size: 1.8rem;
   }
+}
+
+/* Robots page: card media fills the card at a fixed 16:9 shape */
+.robot-grid .card-img-top {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  display: block;
+}
+.robot-card-link,
+.robot-card-link:hover {
+  text-decoration: none;
+  color: inherit;
+}
+.robot-grid .card-title {
+  font-size: 1.25rem;
+  border-left: none;
+  padding-left: 0;
+  margin-top: 0;
+}
+.robot-links .btn {
+  font-size: 0.9rem;
+  padding: 0.3rem 0.9rem;
+  margin: 0 0.4rem 0.4rem 0;
+  border: 1px solid var(--global-theme-color);
+  color: var(--global-theme-color);
+}
+.robot-photo {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+/* Photos and looping clips on research/home/people pages */
+.lab-media {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  display: block;
+}
+.lab-thumb {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  display: block;
+}
+
+/* People page: current member cards */
+.member-card {
+  text-align: center;
+  height: 100%;
+}
+.member-photo {
+  width: 100%;
+  max-width: 180px;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto 0.6rem;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+}
+.member-photo-logo {
+  object-fit: contain;
+  background: #fff; // the ram symbol must stay on a light background, unaltered
+}
+.member-name {
+  font-weight: 600;
+  font-size: 1.05rem;
+}
+.member-meta {
+  color: var(--global-text-color-light);
+  font-size: 0.9rem;
+}
+.member-text {
+  font-size: 0.88rem;
+  margin: 0.4rem 0 0.3rem;
+}
+.member-links a {
+  font-size: 1.2rem;
+  margin: 0 0.3rem;
+  color: var(--global-theme-color);
+}
+
+/* People page slideshow */
+.lab-slideshow {
+  position: relative;
+  aspect-ratio: 3 / 2;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #111;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+}
+.lab-slide {
+  position: absolute;
+  inset: 0;
+  margin: 0;
+  opacity: 0;
+  pointer-events: none; /* hidden slides must not catch clicks */
+  transition: opacity 0.8s ease;
+}
+.lab-slide.active {
+  opacity: 1;
+  pointer-events: auto;
+  z-index: 1;
+}
+.lab-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.lab-slide figcaption {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 1.6rem 1rem 2rem;
+  color: #fff;
+  font-size: 0.95rem;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.65));
+}
+.lab-slide-btn {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  background: rgba(0, 0, 0, 0.35);
+  color: #fff;
+  width: 2.4rem;
+  height: 2.4rem;
+  border-radius: 50%;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+.lab-slide-btn:hover {
+  background: rgba(0, 0, 0, 0.6);
+}
+.lab-slide-btn.prev {
+  left: 0.6rem;
+}
+.lab-slide-btn.next {
+  right: 0.6rem;
+}
+.lab-slide-dots {
+  position: absolute;
+  z-index: 2;
+  bottom: 0.6rem;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+.lab-slide-dots button {
+  width: 0.55rem;
+  height: 0.55rem;
+  padding: 0;
+  margin: 0 0.2rem;
+  border: none;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+}
+.lab-slide-dots button.active {
+  background: #fff;
+}
+@media (prefers-reduced-motion: reduce) {
+  .lab-slide {
+    transition: none;
+  }
+}
+
+/* Publications: uniform 4:3 thumbnails under the venue badge */
+.publications .preview {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+/* Home page: video hero (reuses .lab-slideshow arrows/dots) */
+.lab-hero-video {
+  aspect-ratio: 16 / 9;
+  margin: 0.5rem 0 1.75rem;
+}
+.lab-hero-video .lab-slide video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.lab-hero-video .lab-slide figcaption {
+  padding-bottom: 2.1rem;
+  text-align: right;
+  font-size: 0.95rem;
+}
+.lab-hero-video .lab-slide figcaption a {
+  color: #fff !important;
+  text-decoration: none;
+}
+.lab-hero-video .lab-slide figcaption a:hover {
+  text-decoration: underline;
+}
+.lab-hero-text {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 1.1rem 1.4rem 2.5rem;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), transparent);
+  pointer-events: none;
+}
+.lab-hero-text h1 {
+  color: #fff;
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin: 0;
+}
+.lab-hero-text p {
+  color: #fff;
+  opacity: 0.9;
+  margin: 0.15rem 0 0;
+}
+@media (max-width: 576px) {
+  .lab-hero-text h1 {
+    font-size: 1.4rem;
+  }
+  .lab-hero-text p {
+    font-size: 0.85rem;
+  }
+  .lab-hero-video .lab-slide figcaption {
+    font-size: 0.8rem;
+  }
+}
+
+/* Home page: compact cards and join-us callout */
+.home-cards .card-title {
+  font-size: 1.05rem;
+  margin-bottom: 0.2rem;
+}
+.home-cards .card-body {
+  padding: 0.75rem 0.9rem;
+}
+.lab-callout {
+  margin-top: 2.5rem;
+  padding: 1.25rem 1.5rem;
+  border-left: 5px solid var(--lab-accent);
+  background: var(--global-code-bg-color);
+  border-radius: 6px;
+}
+.lab-callout h2 {
+  margin-top: 0;
+  border-left: none;
+  padding-left: 0;
+}
+
+/* Research page: sponsor logos (one row, balanced by per-logo heights) */
+.sponsor-logos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem 2rem;
+  margin: 1.75rem 0 1rem;
+}
+.sponsor-logos a {
+  display: flex;
+  justify-content: center;
+}
+.sponsor-logos img {
+  height: 60px;
+  width: auto;
+  max-width: 100%;
+}
+.sponsor-logos img.seal {
+  height: 96px;
+}
+.sponsor-logos img.tall {
+  height: 100px;
+}
+@media (max-width: 576px) {
+  .sponsor-logos {
+    justify-content: center;
+  }
+}
+html[data-theme="dark"] .sponsor-logos img {
+  background: #fff;
+  padding: 8px;
+  border-radius: 6px;
+}
+
+/* Publications page: journal first-page slideshow (reuses .lab-slideshow) */
+.journal-show {
+  aspect-ratio: 16 / 9;
+  background: #eef1ee;
+  margin-bottom: 2rem;
+}
+.journal-show .lab-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.25rem 3.5rem 4.6rem;
+}
+.journal-show .lab-slide > a {
+  display: block;
+  height: 100%;
+}
+.journal-show .lab-slide img {
+  height: 100%;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+  background: #fff;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.18);
+}
+.journal-show .lab-slide figcaption {
+  background: rgba(30, 77, 43, 0.92);
+  padding: 0.6rem 1rem 1.7rem;
+  font-size: 0.95rem;
+}
+.journal-show .lab-slide figcaption a,
+.journal-show .lab-slide figcaption strong {
+  color: #fff !important;
+}
+.journal-show .lab-slide-btn {
+  background: rgba(30, 77, 43, 0.55);
+}
+.journal-show .lab-slide-dots {
+  bottom: 0.4rem;
+}
+html[data-theme="dark"] .journal-show {
+  background: #1f2621;
+}
+@media (max-width: 576px) {
+  .journal-show {
+    aspect-ratio: 4 / 3;
+  }
+  .journal-show .lab-slide {
+    padding: 0.8rem 2.6rem 4.2rem;
+  }
+  .journal-show .lab-slide figcaption {
+    font-size: 0.8rem;
+  }
+}
+
+/* News list with a picture per item (home page and /news/) */
+.news-list {
+  margin: 0.5rem 0 1rem;
+}
+.news-item {
+  display: flex;
+  gap: 1.1rem;
+  align-items: flex-start;
+  padding: 0.85rem 0;
+  border-bottom: 1px solid var(--global-divider-color);
+}
+.news-item:last-child {
+  border-bottom: none;
+}
+.news-thumb {
+  flex: 0 0 140px;
+  aspect-ratio: 4 / 3;
+  border-radius: 6px;
+  overflow: hidden;
+  background: var(--global-code-bg-color);
+}
+.news-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.news-thumb-logo {
+  background: #fff;
+  border: 1px solid var(--global-divider-color);
+}
+.news-thumb-logo img {
+  object-fit: contain;
+  padding: 5px;
+}
+.news-body {
+  flex: 1;
+  min-width: 0;
+}
+.news-date {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--global-theme-color);
+  margin-bottom: 0.2rem;
+}
+@media (max-width: 576px) {
+  .news-thumb {
+    flex-basis: 96px;
+  }
+}
+
+/* People page: lab director photo beside bio */
+.director {
+  display: flex;
+  gap: 1.75rem;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+.director-photo {
+  flex: 0 0 180px;
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+}
+@media (max-width: 576px) {
+  .director {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* Publication year headings on the left (theme default is right-aligned) */
+.publications h2.bibliography {
+  text-align: left;
+}
+
+/* Navbar: lab logo next to the lab name (see _includes/header.liquid override) */
+.lab-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.lab-brand-mark {
+  height: 28px;
+  width: auto;
+}
+.lab-brand-dark {
+  display: none;
+}
+html[data-theme="dark"] .lab-brand-light {
+  display: none;
+}
+html[data-theme="dark"] .lab-brand-dark {
+  display: inline-block;
+}
+
+/* Responsive 16:9 video embeds (YouTube) */
+.video-embed {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+}
+.video-embed iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
 }
