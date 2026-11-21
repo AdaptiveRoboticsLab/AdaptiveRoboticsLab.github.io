@@ -1,6 +1,6 @@
 ---
 layout: page
-title: robots
+title: Robots
 permalink: /robots/
 description: Robots developed in the Adaptive Robotics Lab. Click a robot to see how it works and what it can do.
 nav: true

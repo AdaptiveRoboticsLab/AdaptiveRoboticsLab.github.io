@@ -1,6 +1,6 @@
 ---
 layout: about
-title: about
+title: About
 permalink: /
 
 # News and selected papers are placed inside the page content below (so "Join us" can come last),

@@ -1,6 +1,6 @@
 ---
 layout: page
-title: research
+title: Research
 permalink: /research/
 description: To create adaptive robots, we leverage mechanical and biological principles, novel materials, and dynamic control to guide our design.
 nav: true

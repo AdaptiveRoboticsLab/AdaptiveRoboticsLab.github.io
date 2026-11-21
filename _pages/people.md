@@ -1,6 +1,6 @@
 ---
 layout: page
-title: people
+title: People
 permalink: /people/
 description: members of the Adaptive Robotics Lab
 nav: true
