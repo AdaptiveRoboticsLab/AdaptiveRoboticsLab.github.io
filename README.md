@@ -1,6 +1,6 @@
 # Adaptive Robotics Lab website
 
-Source for https://adaptiveroboticslab.github.io, built with the [al-folio](https://github.com/alshedivat/al-folio) Jekyll template.
+Source for https://adaptiverobotics.org (also reachable at adaptiveroboticslab.github.io), built with the [al-folio](https://github.com/alshedivat/al-folio) Jekyll template.
 
 ## How to update
 
