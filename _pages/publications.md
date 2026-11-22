@@ -2,7 +2,7 @@
 layout: page
 permalink: /publications/
 title: Publications
-description: selected publications in reverse chronological order. For the full list, see Google Scholar.
+description: Selected publications in reverse chronological order. For the full list, see <a href='https://scholar.google.com/citations?user=2itcij4AAAAJ'>Dr. Zhao's Google Scholar</a>.
 nav: true
 nav_order: 5
 ---
